@@ -1,11 +1,9 @@
-// import { useState } from "react";
+import { SingleItemProps } from "@/types/itemsTypes";
 
-type useFilterGenderProps = {
-	data: [];
-	gender: string;
-};
-export default function useFilterGender(data, gender): useFilterGenderProps {
+export default function useFilterGender(
+	data: SingleItemProps[],
+	gender: string
+): SingleItemProps[] {
 	const filteredGender = data.filter((item) => item.gender === gender);
-
 	return filteredGender;
 }

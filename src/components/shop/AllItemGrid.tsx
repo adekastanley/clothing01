@@ -2,9 +2,10 @@
 // import Link from "next/link";
 
 import ShopItem from "./shop-item";
+import { DataProps } from "@/types/itemsTypes";
 // import { useState } from "react";
 
-export default function AllItemGrid({ shopData }: { shopData: [] }) {
+export default function AllItemGrid({ shopData }: DataProps) {
 	return (
 		<section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
 			<div className="mx-auto max-w-5xl border-t px-6">
