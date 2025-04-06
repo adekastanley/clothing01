@@ -2,14 +2,8 @@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import ShoppingCard from "./shopping-card";
 import useColorSelector from "@/hooks/useColorSelector";
-
-export default function ShopItem({
-	item,
-	index,
-}: {
-	item: any;
-	index: number;
-}) {
+//@ts-ignore
+export default function ShopItem({ item, index }) {
 	const { selectedColor, handleColorChange } = useColorSelector(item.images);
 
 	return (
