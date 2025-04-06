@@ -1,11 +1,8 @@
 "use client";
 // import Link from "next/link";
 
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import ShoppingCard from "./shopping-card";
 import ShopItem from "./shop-item";
 // import { useState } from "react";
-import useColorSelector from "@/hooks/useColorSelector";
 
 export default function AllItemGrid({ shopData }: any) {
 	return (
