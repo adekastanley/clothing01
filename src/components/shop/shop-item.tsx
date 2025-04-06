@@ -2,7 +2,7 @@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import ShoppingCard from "./shopping-card";
 import useColorSelector from "@/hooks/useColorSelector";
-//@ts-ignore
+// @ts-expect-error bruhhh i tired
 export default function ShopItem({ item, index }) {
 	const { selectedColor, handleColorChange } = useColorSelector(item.images);
 
