@@ -7,10 +7,10 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-	{ name: "shop", href: "shop" },
-	{ name: "Solution", href: "#link" },
-	{ name: "Pricing", href: "#link" },
-	{ name: "About", href: "#link" },
+	{ name: "men", href: "men" },
+	{ name: "women", href: "women" },
+	{ name: "kids", href: "kids" },
+	{ name: "fragrance", href: "fragrance" },
 ];
 
 // icons

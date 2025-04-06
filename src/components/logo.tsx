@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 // import { motion } from "motion/react";
 
-export const Logo = ({ className }: { className?: string }) => {
+export const Logo = ({}: { className?: string }) => {
 	return <h1 className="font-extrabold ">Idibia</h1>;
 };
 
