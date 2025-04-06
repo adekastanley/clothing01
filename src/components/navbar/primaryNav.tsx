@@ -13,6 +13,10 @@ const menuItems = [
 	{ name: "About", href: "#link" },
 ];
 
+// icons
+
+import { ShoppingCart } from "lucide-react";
+
 export const PrimaryNavigation = () => {
 	const [menuState, setMenuState] = React.useState(false);
 	const [isScrolled, setIsScrolled] = React.useState(false);
@@ -112,7 +116,7 @@ export const PrimaryNavigation = () => {
 									className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
 								>
 									<Link href="#">
-										<span>Get Started</span>
+										<ShoppingCart />
 									</Link>
 								</Button>
 							</div>

@@ -6,7 +6,8 @@ import { TextEffect } from "../ui/text-effect";
 import { AnimatedGroup } from "../ui/animated-group";
 
 import { LogoCloud } from "@/components/logo-cloud";
-import Image from "next/image";
+// import Image from "next/image";
+import Notice from "../notice";
 
 const transitionVariants = {
 	item: {
@@ -31,6 +32,9 @@ const transitionVariants = {
 export default function HeroSection() {
 	return (
 		<>
+			<div className=" bg-black w-full z-100 relative">
+				<Notice />
+			</div>
 			<main className="overflow-hidden">
 				<div
 					aria-hidden

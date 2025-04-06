@@ -1,4 +1,4 @@
-import { InfiniteSlider } from "../../components/motion-primitives/infinite-slider";
+import { InfiniteSlider } from "./ui/infinite-slider";
 
 export const LogoCloud = () => {
 	return (
