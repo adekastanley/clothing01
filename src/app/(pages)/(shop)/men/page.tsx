@@ -1,4 +1,4 @@
-import ShopItemGrid from "@/components/shop/shop-items-grid";
+import MenPage from "@/components/shop/men";
 export default function Men() {
-	return <ShopItemGrid />;
+	return <MenPage />;
 }

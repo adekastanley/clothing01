@@ -12,8 +12,8 @@ import Image from "next/image";
 const images = [
 	"/assets/products/m11.webp",
 	"/assets/products/m21.webp",
-	"/assets/products/p3.webp",
-	"/assets/products/p4.webp",
+	"/assets/products/m31.webp",
+	"/assets/products/m41.webp",
 ];
 export default function NewArrival() {
 	return (

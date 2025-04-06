@@ -1,4 +1,4 @@
-import ShopItemGrid from "@/components/shop/shop-items-grid";
+import WomenPage from "@/components/shop/women";
 export default function Women() {
-	return <ShopItemGrid />;
+	return <WomenPage />;
 }

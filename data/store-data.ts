@@ -19,7 +19,7 @@ const shopData = [
 				],
 			},
 			{
-				color: "bde0fe",
+				color: "ffc8dd",
 				images: ["/assets/products/m14.webp"],
 			},
 		],
@@ -57,10 +57,9 @@ const shopData = [
 			{
 				color: "0096c7",
 				images: [
-					"/assets/products/p1.webp",
-					"/assets/products/p2.webp",
-					"/assets/products/p3.webp",
-					"/assets/products/p4.webp",
+					"/assets/products/m31.webp",
+					"/assets/products/m32.webp",
+					"/assets/products/m33.webp",
 				],
 			},
 		],
@@ -76,23 +75,23 @@ const shopData = [
 		description: "A comfortable cotton shirt for everyday wear.",
 		images: [
 			{
-				color: "0096c7",
+				color: "e9edc9",
 				images: [
-					"/assets/products/p1.webp",
-					"/assets/products/p2.webp",
+					"/assets/products/m41.webp",
+					"/assets/products/m42.webp",
 
-					"/assets/products/p4.webp",
+					"/assets/products/m43.webp",
 				],
 			},
 			{
-				color: "bde0fe",
+				color: "ffcdb2",
 				images: ["/assets/products/m14.webp"],
 			},
 		],
 	},
 	{
 		id: 5,
-		gender: "female",
+		gender: "male",
 		title: "cotton shirt",
 		price: "130,000",
 		discount: "10%",

@@ -9,13 +9,14 @@ import Image from "next/image";
 
 type SingleImageProps = {
 	color: string;
-	images: [];
+	images: string[];
 };
 
 type ImagesProps = {
-	images: [SingleImageProps];
+	images: SingleImageProps[];
 	color: string;
 };
+
 export default function ShoppingCard({ images, color }: ImagesProps) {
 	const selectedColorGroup = images.find((group) => group.color === color);
 
