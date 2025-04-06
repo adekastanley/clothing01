@@ -17,7 +17,7 @@ const images = [
 ];
 export default function NewArrival() {
 	return (
-		<section className="px-40">
+		<section className="px-12 lg:px-40">
 			<Carousel>
 				<CarouselContent className="-ml-2 md:-ml-4">
 					{images.map((image, index) => (
