@@ -1,45 +1,19 @@
+"use client";
 import Link from "next/link";
-
-const members = [
-	{
-		name: "Liam Brown",
-		type: "Jeans",
-		avatar: "https://alt.tailus.io/images/team/member-one.webp",
-		link: "#",
-	},
-	{
-		name: "Elijah Jones",
-		type: "Co-Founder - CTO",
-		avatar: "https://alt.tailus.io/images/team/member-two.webp",
-		link: "#",
-	},
-	{
-		name: "Isabella Garcia",
-		type: "Sales Manager",
-		avatar: "https://alt.tailus.io/images/team/member-three.webp",
-		link: "#",
-	},
-	{
-		name: "Henry Lee",
-		type: "UX Engeneer",
-		avatar: "https://alt.tailus.io/images/team/member-four.webp",
-		link: "#",
-	},
-	{
-		name: "Ava Williams",
-		type: "Interaction Designer",
-		avatar: "https://alt.tailus.io/images/team/member-five.webp",
-		link: "#",
-	},
-	{
-		name: "Olivia Miller",
-		type: "Visual Designer",
-		avatar: "https://alt.tailus.io/images/team/member-six.webp",
-		link: "#",
-	},
-];
+import shopData from "../../../data/store-data";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import ShoppingCard from "./shopping-card";
+import { useState } from "react";
 
 export default function ShopItemGrid() {
+	const [selectedColor, setSelectedCOlor] = useState(
+		shopData[0].images[0].color
+	);
+
+	const handleColorChange = (color: string) => {
+		setSelectedCOlor(color);
+	};
+
 	return (
 		<section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
 			<div className="mx-auto max-w-5xl border-t px-6">
@@ -49,36 +23,58 @@ export default function ShopItemGrid() {
 
 				<div className="mt-12 md:mt-24">
 					<div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-						{members.map((member, index) => (
-							<div key={index} className="group overflow-hidden">
-								<img
+						{shopData.map((item, index) => (
+							<section key={index} className="">
+								<div key={index} className="group overflow-hidden">
+									{/* <img
 									className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
-									src={member.avatar}
-									alt="team member"
+									src={image.images[0]}
+									alt="team image"
 									width="826"
 									height="1239"
-								/>
-								<div className="px-2 pt-2 sm:pb-0 sm:pt-4">
-									<div className="flex justify-between">
-										<h3 className="text-title text-base font-medium transition-all duration-500 group-hover:tracking-wider">
-											{member.name}
-										</h3>
-										<span className="text-xs">_0{index + 1}</span>
-									</div>
-									<div className="mt-1 flex items-center justify-between">
-										<span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-											{member.type}
-										</span>
-										<Link
-											href={member.link}
+								/> */}
+									<ShoppingCard images={item.images} color={selectedColor} />
+
+									<div className="px-2 pt-2 sm:pb-0 sm:pt-4">
+										<div className="flex justify-between">
+											<h3 className="text-title text-base font-medium transition-all duration-500 group-hover:tracking-wider">
+												{item.title}
+											</h3>
+											<span className="text-xs">_0{index + 1}</span>
+										</div>
+										<div className="mt-1 flex items-center justify-between">
+											{/* <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+												{item.description}
+											</span> */}
+											{/* <Link
+											href={image.category}
 											className="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
 										>
-											{" "}
 											Linktree
-										</Link>
+										</Link> */}
+										</div>
 									</div>
 								</div>
-							</div>
+
+								<RadioGroup
+									defaultValue={item.images[0]?.color}
+									className="flex mt-1"
+									onValueChange={(value) => handleColorChange(value)}
+								>
+									{item.images.map((color, index) => {
+										return (
+											<div key={index} className="flex items-center space-x-2">
+												<RadioGroupItem
+													style={{ backgroundColor: `#${color.color}` }}
+													value={color.color}
+													id={item.images[index - 1]?.color}
+													className=""
+												/>
+											</div>
+										);
+									})}
+								</RadioGroup>
+							</section>
 						))}
 					</div>
 				</div>

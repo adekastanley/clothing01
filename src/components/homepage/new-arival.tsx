@@ -10,8 +10,8 @@ import {
 import Image from "next/image";
 
 const images = [
-	"/assets/products/p1.webp",
-	"/assets/products/p2.webp",
+	"/assets/products/m11.webp",
+	"/assets/products/m21.webp",
 	"/assets/products/p3.webp",
 	"/assets/products/p4.webp",
 ];
