@@ -1,11 +1,8 @@
 import React from "react";
-import { Mail, SendHorizonal } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "../ui/text-effect";
 
-import { AnimatedGroup } from "../ui/animated-group";
-
-import { LogoCloud } from "@/components/logo-cloud";
 // import Image from "next/image";
 import Notice from "../notice";
 

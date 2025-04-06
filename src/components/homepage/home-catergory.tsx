@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function HomeCategory() {
 	return (
-		<div className="w-full flex max-md:flex-col h-screen border-8 border-primary">
+		<div className="w-full flex max-md:flex-col  min-h-screen border-8 border-primary">
 			<motion.div
 				className="w-full h-full   relative"
 				whileHover={{
@@ -16,7 +16,7 @@ export default function HomeCategory() {
 				<Link href={""}>
 					<Image
 						src={"/assets/homepage/female.jpg"}
-						className="object-cover h-full w-full"
+						className="object-cover !h-full w-full"
 						width={1280}
 						height={1920}
 						alt="shop female"
@@ -27,7 +27,7 @@ export default function HomeCategory() {
 				</div>
 			</motion.div>
 			<motion.div
-				className="w-full h-full  relative "
+				className="w-full !h-full  relative "
 				whileHover={{
 					opacity: 0.8,
 					transition: { duration: 1 },

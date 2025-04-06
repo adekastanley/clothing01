@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 import { PrimaryNavigation } from "@/components/navbar/primaryNav";
+import FooterSection from "@/components/navbar/footer";
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -30,6 +31,7 @@ export default function RootLayout({
 			>
 				<PrimaryNavigation />
 				{children}
+				<FooterSection />
 			</body>
 		</html>
 	);
